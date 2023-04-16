@@ -19,5 +19,11 @@ namespace ProjectOfNET6.Controllers
             var products = _productRepository.GetProducts();
             return Ok(products);
         }
+        [HttpGet("productId")]
+        public IActionResult GetProduct(Guid productId)
+        {
+            var product = _productRepository.GetProduct(productId);
+            return Ok(product);
+        }
     }
 }
